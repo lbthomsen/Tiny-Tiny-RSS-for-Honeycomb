@@ -2,7 +2,7 @@
 <resources>
 
     <string name="login_in_progress">Logging in…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">TTRSS Reader</string>
     <string name="login_need_configure">Please configure the application first.</string>
     <string name="login_ready">Ready to login.</string>
     <string name="login_login">Log in</string>

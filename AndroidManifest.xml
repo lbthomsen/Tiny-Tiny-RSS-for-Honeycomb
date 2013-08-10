@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.fox.ttrss"
-    android:versionCode="146"
-    android:versionName="1.23">
+    package="com.netcompartner.ttrss"
+    android:versionCode="1"
+    android:versionName="1.00">
 
     <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -80,7 +80,7 @@
 
         <meta-data
             android:name="com.google.android.backup.api_key"
-            android:value="AEdPqrEAAAAIwG6zsGB4qo6ZhjfwIJpm9WI7AqmWaoRXm6ZJnA" />
+            android:value="AEdPqrEAAAAIdG6pygQ4lcwhZmAQU-ox41BFn-GKLhM8wdqRoA" />
     </application>
 
 </manifest>
