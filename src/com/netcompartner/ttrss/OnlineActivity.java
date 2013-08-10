@@ -19,6 +19,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -453,8 +454,19 @@ public class OnlineActivity extends CommonActivity {
 	}
 	
 	public void checkTrial(boolean notify) {
+		
+		// This check won't work here
 		boolean isTrial = getPackageManager().checkSignatures(
 				getPackageName(), "org.fox.ttrss.key") != PackageManager.SIGNATURE_MATCH;
+		
+		// However, this should be OK
+		if (isTrial) {
+			try {
+				isTrial = this.getPackageManager().getApplicationInfo("org.fox.ttrss.key", 0) == null;
+			} catch (NameNotFoundException e) {
+				isTrial = true;
+			}
+		}
 
 		if (isTrial) {
 			long firstStart = m_prefs.getLong("date_firstlaunch_trial", -1);
